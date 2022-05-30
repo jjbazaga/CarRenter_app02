@@ -1,7 +1,6 @@
 ﻿using System;
 using CarRental_app.Entites;
 using CarRental_app.Services;
-using System.Text;
 using System.Globalization;
 
 
@@ -25,7 +24,7 @@ namespace CarRental_app
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new RentalService(pricePerHour, pricePerDay);
+            RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
             rentalService.ProcessInvoice(carRental);
 
             Console.WriteLine(carRental.Invoice);

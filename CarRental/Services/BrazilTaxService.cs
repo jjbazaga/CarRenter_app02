@@ -1,6 +1,6 @@
 ﻿namespace CarRental_app.Services
 {
-    class BrazilTaxService
+    class BrazilTaxService : ITaxService   //realização de interface
     {
         public double Tax(double amount)
         {
